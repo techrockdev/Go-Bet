@@ -1,5 +1,5 @@
 
-import { FaTh, FaUserAlt, FaRegChartBar, FaCommentAlt, FaShoppingBag, FaThList } from "react-icons/fa";
+import { FaTh, FaUserAlt, FaRegChartBar, FaCommentAlt, FaShoppingBag } from "react-icons/fa";
 
 export const menuItem = [
     {
@@ -27,9 +27,5 @@ export const menuItem = [
         name: "Product",
         icon: <FaShoppingBag />
     },
-    {
-        path: "/productList",
-        name: "Product List",
-        icon: <FaThList />
-    }
+    
 ]

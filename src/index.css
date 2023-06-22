@@ -15,3 +15,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.login{
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../src/asset/image/gobet.png);
+}
+
+
+.name{
+  font-family: 'Tilt Prism', cursive;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+main::-webkit-scrollbar{
+  display: none;
+}
+
+.anime{
+  animation-name: hideText;
+  animation-duration: .3s;
+}
+
+@keyframes hideText {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: .5;
+  }
+}

@@ -14,16 +14,14 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import gobetLogo from '../../../asset/image/gobet2.jpeg' 
+import gobetLogo from '../../../asset/image/gobet2.jpeg'
 import { Profile } from '../../../UI/profile/Profile';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
-    borderRadius: theme.shape.borderRadius,
     backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
+    borderRadius:'12px',
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
@@ -33,7 +31,7 @@ const Search = styled('div')(({ theme }) => ({
     },
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
+const SearchIconWrapper:any = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
@@ -47,7 +45,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,
         transition: theme.transitions.create('width'),
         width: '100%',
@@ -57,7 +54,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export const Header = ()=> {
+export const Header = () => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
         React.useState<null | HTMLElement>(null);
@@ -99,8 +96,8 @@ export const Header = ()=> {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Sign In</MenuItem>
+            <MenuItem onClick={handleMenuClose}><a href="profile">Profile</a></MenuItem>
+            <MenuItem onClick={handleMenuClose}><a href="login">Sign In</a></MenuItem>
         </Menu>
     );
 
@@ -151,29 +148,29 @@ export const Header = ()=> {
                 >
                     <Profile className='w-[25px] rounded-full' />
                 </IconButton>
-                <p>Profile</p>
+                <p><a href="profile">Profile</a></p>
             </MenuItem>
         </Menu>
     );
 
     return (
-        <Box sx={{ flexGrow: 1 }} >
-            <AppBar position="static" style={{ background: 'black' }}>
+        <Box sx={{ flexGrow: 1 }} position='fixed' width='100%' zIndex='1000'>
+            <AppBar position="static" style={{ background: 'black' ,padding: '6px 0px' }}>
                 <Toolbar>
-                    <img src={gobetLogo} className='w-[50px] mr-2 rounded-full' alt="gobet logo" />
+                    <img src={gobetLogo} alt="" className='w-[50px] rounded-full mr-2'/>
                     <Typography
                         variant="h6"
                         noWrap
                         component="div"
                         sx={{ display: { xs: 'none', sm: 'block' } }}
                     >
-                        
+
                     </Typography>
-                    <Search className='bg-red-500'>
+                    <Search>
                         <SearchIconWrapper>
                             <SearchIcon />
                         </SearchIconWrapper>
-                        <StyledInputBase
+                        <StyledInputBase className='border-blue-500 border-[1px] rounded-xl'
                             placeholder="Search…"
                             inputProps={{ 'aria-label': 'search' }}
                         />
@@ -194,8 +191,8 @@ export const Header = ()=> {
                                 <NotificationsIcon />
                             </Badge>
                         </IconButton>
-                        
-                        
+
+
                         <IconButton
                             size="large"
                             edge="end"
@@ -205,7 +202,7 @@ export const Header = ()=> {
                             onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
-                            <Profile className='w-[25px] rounded-full' />
+                            <AccountCircle />
                         </IconButton>
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -224,6 +221,9 @@ export const Header = ()=> {
             </AppBar>
             {renderMobileMenu}
             {renderMenu}
+            <main>
+                <Outlet />
+            </main>
         </Box>
     );
 }
