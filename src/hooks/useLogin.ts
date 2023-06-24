@@ -1,5 +1,5 @@
 import { app } from '../config/firebase';
-import { ChangeEvent, useEffect, useRef, useState } from 'react';
+import { ChangeEvent,  useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 export const useLogin = () => {
