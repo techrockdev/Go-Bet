@@ -159,7 +159,7 @@ export const Header = () => {
 		<Box sx={{ flexGrow: 1 }} position="fixed" width="100%" zIndex="1000">
 			<AppBar
 				position="static"
-				style={{ background: "#343434", padding: "6px 0px" }}>
+				style={{ background: "#0D1B2A", padding: "6px 0px" }}>
 				<Toolbar>
 					<img src={gobetLogo} alt="" className="w-[50px] rounded-full mr-2" />
 					<Typography
@@ -172,7 +172,7 @@ export const Header = () => {
 							<SearchIcon />
 						</SearchIconWrapper>
 						<StyledInputBase
-							className="border-blue-500 border-[1px] rounded-xl"
+							className="border-[#3F84E5] border-[1px] rounded-xl"
 							placeholder="Search…"
 							inputProps={{ "aria-label": "search" }}
 						/>

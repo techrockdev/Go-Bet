@@ -6,11 +6,10 @@ type PropType = {
 export const SlideContent = ({ src, alt }: PropType) => {
 	return (
 		<div>
-			<div className="h-80 w-full">
+			<div className="h-[18.4rem] w-full">
 				<img
 					src={src}
 					alt={alt}
-					width="500px"
 					className="h-full w-full object-cover rounded"
 				/>
 			</div>

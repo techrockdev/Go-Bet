@@ -7,26 +7,21 @@ import stadium from "../../asset/image/stadium.jpg";
 
 export const Slider = () => {
 	return (
-		<Card className=" w-full h-80">
+		<Card className="h-[18.4rem]">
 			<Splide
 				options={{
 					rewind: true,
 					autoplay: true,
-					arrows: false,
-					// speed: 10,
-
-					gap: "1rem",
-					width: 1000,
-					// height: 250,
+					arrows: true,
+					speed: 10,
 				}}
-				className="h-full	">
+				className="h-full">
 				<SplideSlide>
 					<SlideContent src={stadium} alt="Football Stadium" />
 				</SplideSlide>
 				<SplideSlide>
 					<SlideContent src={womenFootball} alt="Women Football " />
 				</SplideSlide>
-				{/* <SplideSlide><img src={image1} alt="Imge 3" /></SplideSlide> */}
 			</Splide>
 		</Card>
 	);
