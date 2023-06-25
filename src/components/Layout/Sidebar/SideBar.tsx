@@ -12,7 +12,7 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
 			<div
 				className={`${
 					isOpen ? "w-[300px]" : "w-[50px]"
-				} bg-[#343434] z-[999] text-white h-[100vh] transition-all duration-[0.5s] `}>
+				} bg-[#0D1B2A] z-[999] text-white h-[100vh] transition-all duration-[0.5s] `}>
 				<div className=" text-white translate-y-[-8px] border-b-gray-600 rounded-b-[40px] border-b">
 					<div
 						className={`${
@@ -39,7 +39,7 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
 						<NavLink
 							to={item.path}
 							key={index}
-							className="flex items-center text-white py-[10px] px-[15px] space-x-3 transition-all duration-[0.5s] border-l border-l-transparent hover:border-l-blue-400 hover:border-l-4 active:transition-all active:duration-[0.5s] ">
+							className="flex items-center text-white py-[10px] px-[15px] space-x-3 transition-all duration-[0.5s]  border-l-transparent hover:border-l-[#3F84E5] border-l-4 active:transition-all active:duration-[0.5s] ">
 							<div className="icon">{item.icon}</div>
 							<div
 								className={`${isOpen ? "block" : "hidden"} text-[18px] anime`}>
@@ -50,7 +50,7 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
 				</div>
 			</div>
 
-			<main className=" bg-[#262626] text-white relative h-[100vh] w-full overflow-y-scroll">
+			<main className=" bg-[rgba(13,27,42,0.9)] text-white relative h-[100vh] w-full overflow-y-scroll">
 				{children}
 			</main>
 		</div>

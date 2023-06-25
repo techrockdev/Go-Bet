@@ -5,5 +5,5 @@ type PropType = {
 	className: string;
 };
 export const Card = ({ className, children }: PropType) => {
-	return <div className={`bg-[#343434] rounded ${className}`}>{children}</div>;
+	return <div className={`bg-[#0D1B2A] rounded ${className}`}>{children}</div>;
 };
