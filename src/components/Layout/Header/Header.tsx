@@ -14,7 +14,6 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import gobetLogo from "../../../asset/image/gobet2.jpeg";
 import { Profile } from "../../UI/profile/Profile";
 import {  Outlet } from "react-router-dom";
 
@@ -161,7 +160,6 @@ export const Header = () => {
 				position="static"
 				style={{ background: "#0D1B2A", padding: "6px 0px" }}>
 				<Toolbar>
-					<img src={gobetLogo} alt="" className="w-[50px] rounded-full mr-2" />
 					<Typography
 						variant="h6"
 						noWrap

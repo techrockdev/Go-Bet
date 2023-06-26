@@ -9,6 +9,7 @@ import { Product } from './page/Product';
 import { Header } from './components/Layout/Header/Header';
 import { LoginPage } from './page/Login/Login';
 import { UserProfile } from './page/UserProfile/UserProfile';
+import { DashboardLayout } from './components/Layout/DashboardLayout';
 
 
 export interface IApplicationProps { }
@@ -16,12 +17,8 @@ export interface IApplicationProps { }
 const App: React.FunctionComponent<IApplicationProps> = () => {
   return (
     <>
-      <div>
-        <Header />
-      </div>
-      <div>
         <BrowserRouter>
-          <Sidebar>
+        <DashboardLayout>
             <Routes>
               
               <Route index path="/" element={<Dashboard />} />
@@ -33,9 +30,8 @@ const App: React.FunctionComponent<IApplicationProps> = () => {
               <Route path='login' element={<LoginPage />} />
               <Route path='profile' element={<UserProfile />} />
             </Routes>
-          </Sidebar>
+          </DashboardLayout>
         </BrowserRouter>
-      </div>
     </>
   );
 };

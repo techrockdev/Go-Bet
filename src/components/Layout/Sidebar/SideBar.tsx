@@ -8,7 +8,7 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggle = () => setIsOpen(!isOpen);
 	return (
-		<div className="flex fixed md:top-[76px] w-full sm:top-[68px]">
+		<div className="flex  w-full">
 			<div
 				className={`${
 					isOpen ? "w-[300px]" : "w-[50px]"
@@ -50,9 +50,9 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
 				</div>
 			</div>
 
-			<main className=" bg-[rgba(13,27,42,0.9)] text-white relative h-[100vh] w-full overflow-y-scroll">
-				{children}
-			</main>
+			
 		</div>
 	);
 };
+
+
