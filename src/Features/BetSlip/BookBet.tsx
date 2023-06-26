@@ -1,3 +1,5 @@
+import { Button } from "../../components/UI/Button/Button";
+
 export const BookBet = () => {
 	return (
 		<form className="p-4">
@@ -36,9 +38,7 @@ export const BookBet = () => {
 					</div>
 				</div>
 			</div>
-			<button className="bg-[#3F84E5] p-2 rounded font-bold w-full">
-				Place a Bet
-			</button>
+			<Button className="bg-[#3F84E5] font-bold w-full">Place a Bet</Button>
 		</form>
 	);
 };

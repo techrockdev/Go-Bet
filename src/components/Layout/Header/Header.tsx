@@ -15,7 +15,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { Profile } from "../../UI/profile/Profile";
-import {  Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",
@@ -155,7 +155,7 @@ export const Header = () => {
 	);
 
 	return (
-		<Box sx={{ flexGrow: 1 }} position="fixed" width="100%" zIndex="1000">
+		<Box sx={{ flexGrow: 1 }} width="100%" borderBottom='2px solid white'>
 			<AppBar
 				position="static"
 				style={{ background: "#0D1B2A", padding: "6px 0px" }}>

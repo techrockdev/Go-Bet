@@ -8,7 +8,7 @@ export const UserProfile = () => {
 	return (
 		<section>
 			<section className="shadow rounded">
-				<div className="bg-blue-500 lg:h-[200px] sm:h-[80px] md:h-[150px] flex items-center justify-center font-bold text-white lg:text-6xl md:text-4xl sm:text-1xl font-cursive">
+				<div className="bg-[#3F84E5] lg:h-[200px] sm:h-[80px] md:h-[150px] flex items-center justify-center font-bold text-white lg:text-6xl md:text-4xl sm:text-1xl font-cursive">
 					<h1 className="name">Sign Up</h1>
 				</div>
 				<div className="lg:translate-y-[-50px] sm:translate-y-[-30px] md:translate-y-[-30px] flex md:justify-center sm:justify-start sm:pl-2">
@@ -27,10 +27,10 @@ export const UserProfile = () => {
 							</div>
 						</div>
 						<div className="flex md:space-x-3 sm:space-x-2 mt-2">
-							<Button className="bg-blue-500 text-white sm:py-[2px]">
+							<Button className="bg-[#3F84E5] text-white sm:py-[2px]">
 								Message
 							</Button>
-							<Button className="bg-blue-500 text-white sm:py-[2px]">
+							<Button className="bg-[#3F84E5] text-white sm:py-[2px]">
 								Share profile
 							</Button>
 						</div>
