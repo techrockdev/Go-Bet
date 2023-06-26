@@ -50,7 +50,7 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
 				</div>
 			</div>
 
-			<main className=" bg-[rgba(13,27,42,0.9)] text-white relative h-[100vh] w-full overflow-y-scroll">
+			<main className="bg-[rgba(13,27,42,0.9)] text-white relative h-[100vh] w-full overflow-y-scroll">
 				{children}
 			</main>
 		</div>
