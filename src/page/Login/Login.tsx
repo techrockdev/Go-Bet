@@ -49,12 +49,12 @@ export const LoginPage: React.FunctionComponent<ILoginPageProps> = () => {
 					</div>
 					<Button
 						onClick={signUp}
-						className="my-2 bg-blue-500 outline-none border-none text-white  w-[100%]">
+						className="my-2 bg-[#3F84E5] text-white  w-[100%]">
 						Create An Account
 					</Button>
 					<Button
 						onClick={signIn}
-						className=" bg-blue-500 outline-none border-none text-white  w-[100%]">
+						className=" bg-[#3F84E5] text-white  w-[100%]">
 						Sign Up
 					</Button>
 				</form>

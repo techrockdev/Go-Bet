@@ -16,7 +16,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import gobetLogo from "../../../asset/image/gobet2.jpeg";
 import { Profile } from "../../UI/profile/Profile";
-import {  Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",

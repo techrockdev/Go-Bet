@@ -34,7 +34,7 @@ export const UserProfileForm = () => {
 				/>
 			</div>
 			<Button
-				className="w-[100%] font-bold text-white bg-blue-500 cursor-no-drop"
+				className="w-[100%] font-bold text-white bg-[#3F84E5] cursor-no-drop"
 				disabled>
 				Save
 			</Button>
