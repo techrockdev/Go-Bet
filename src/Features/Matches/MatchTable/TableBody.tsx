@@ -19,6 +19,7 @@ export const TBody = () => {
 					<TableCell>{row.fat}</TableCell>
 
 					<TableCell component="th" scope="row" className="bg-[#3F 84E5]">
+						
 						{row.name}
 					</TableCell>
 				</TableRow>
