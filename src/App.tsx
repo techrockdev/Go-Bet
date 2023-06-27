@@ -9,7 +9,6 @@ import { Product } from './page/Product';
 import { Header } from './components/Layout/Header/Header';
 import { LoginPage } from './page/Login/Login';
 import { UserProfile } from './page/UserProfile/UserProfile';
-import { DashboardLayout } from './components/Layout/DashboardLayout';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { QueryClient } from '@tanstack/react-query';
 
@@ -22,8 +21,11 @@ const App: React.FunctionComponent<IApplicationProps> = () => {
   return (
     <>
       <QueryClientProvider client={queryClient}>
+        <div>
+          <Header/>
+        </div>
         <BrowserRouter>
-        <DashboardLayout>
+        <Sidebar>
             <Routes>
               <Route index path="/" element={<Dashboard />} />
               <Route path="/dashboard" element={<Dashboard />}/>
@@ -34,7 +36,7 @@ const App: React.FunctionComponent<IApplicationProps> = () => {
               <Route path='login' element={<LoginPage />} />
               <Route path='profile' element={<UserProfile />} />
             </Routes>
-          </DashboardLayout>
+          </Sidebar>
       </BrowserRouter>
       </QueryClientProvider>
     </>

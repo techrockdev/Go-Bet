@@ -8,11 +8,11 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggle = () => setIsOpen(!isOpen);
 	return (
-		<div className="flex relative">
+		<div className="flex fixed top-[76px] w-full">
 			<div
 				className={`${
-					isOpen ? "w-[250px]" : "w-[50px]"
-				} bg-[#0D1B2A] z-[999] text-white h-[100vh] transition-all duration-[0.5s] pt-[25px]`}>
+					isOpen ? "w-[300px]" : "w-[50px]"
+				} bg-[#0D1B2A] z-[999] text-white h-[100vh] transition-all duration-[0.5s]`}>
 				<div className=" text-white translate-y-[-8px] border-b-gray-600 rounded-b-[40px] border-b">
 					<div
 						className={`${
@@ -49,7 +49,9 @@ export const Sidebar = ({ children }: { children: ReactNode }) => {
 					))}
 				</div>
 			</div>
-
+			<main className=" bg-[rgba(13,27,42,0.9)] text-white relative h-[100vh] w-full overflow-y-scroll">
+				{children}
+			</main>
 		</div>
 	);
 };
