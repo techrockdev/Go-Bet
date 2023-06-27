@@ -1,28 +1,35 @@
+import { TableCell, TableRow } from "@mui/material";
 import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableRow from "@mui/material/TableRow";
-import MatchData from "../MatchData";
+import { TableRowsLoader } from "./TableSkeleton";
+import { useMatches } from "../../../hooks/useMatches";
 
 export const TBody = () => {
+	const {matches , data}= useMatches()
+
 	return (
 		<TableBody>
-			{MatchData().map((row) => (
-				<TableRow
-					key={row.name}
-					sx={{ "td, th": { border: 0, color: "#EEF0F2 " } }}>
-					<TableCell>{row.fat}</TableCell>
+			{!data ? (
+				<TableRowsLoader rowsNum={5} />
+			) : (
+				matches.map((row: any) => (
+					<TableRow
+						key={row.id}
+						sx={{ "td, th": { border: 0, color: "#EEF0F2 " } }}
+					>
+						<TableCell>{row.date}</TableCell>
 
-					<TableCell className="bg-[#3 F84E5]" component="th" scope="row">
-						{row.name}
-					</TableCell>
+						<TableCell className="bg-[#3 F84E5]" component="th" scope="row">
+							{row.club1}
+						</TableCell>
 
-					<TableCell>{row.fat}</TableCell>
+						<TableCell>{row.odds}</TableCell>
 
-					<TableCell component="th" scope="row" className="bg-[#3F 84E5]">
-						{row.name}
-					</TableCell>
-				</TableRow>
-			))}
+						<TableCell component="th" scope="row" className="bg-[#3F 84E5]">
+							{row.club2}
+						</TableCell>
+					</TableRow>
+				))
+			)}
 		</TableBody>
 	);
-};
+}
