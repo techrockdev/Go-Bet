@@ -6,7 +6,7 @@ export const Button = ({ className, icon, children, ...props }: ButtonType) => {
 	return (
 		<button
 			{...props}
-			className={`outline-none bg-[#3F84E5] p-2 rounded font-bold uppercase ${className}`}>
+			className={`outline-none text-[#EEF0F2] bg-[#3F84E5] p-2 rounded font-bold uppercase ${className}`}>
 			{children}
 		</button>
 	);
