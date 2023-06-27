@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
 export const useMatches = () => {
-    const [matches, setMatches] = useState<{ id: string; club1: any; club2: any; odds: any; date: any; }[]>([]);
+    const [matches, setMatches] = useState<{ id: string; club1: any; club2: any; odds: any; date: any; win:any}[]>([]);
     const queryKey = ['tableData', 'https://go-bet-auth-email-pass-default-rtdb.firebaseio.com/matches.json'];
     const { data } = useQuery(queryKey, async () => {
         const response = await fetch('https://go-bet-auth-email-pass-default-rtdb.firebaseio.com/matches.json');
@@ -15,6 +15,7 @@ export const useMatches = () => {
                 club2: data[key].club2,
                 odds: data[key].odds,
                 date: data[key].date,
+                win: `$${data[key].win}`
             })
         }
         setMatches(loadedMatches);
